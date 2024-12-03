@@ -276,7 +276,7 @@ class WaybackMachineDownloader
         structure_dir_path dir_path
         open(file_path, "wb") do |file|
           begin
-            http.get(URI("https://web.archive.org/web/#{file_timestamp}id_/#{file_url}")) do |body|
+            http.get(URI("https://web.archive.org/web/#{file_timestamp}/#{file_url}")) do |body|
               file.write(body)
             end
           rescue OpenURI::HTTPError => e
